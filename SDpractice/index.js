@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express();
+const PORT = process.env.PORT || 8000;
 const path = require("path")
 app.set("view engine" , "ejs")
 app.set("views" , path.resolve("views"))
@@ -19,6 +20,7 @@ app.get("/Contact" ,(req,res)=>{
 app.get("/Project" ,(req,res)=>{
     res.render("Project")
 })
-app.listen(8000 , ()=>{
+app.listen(PORT , ()=>{
     console.log("http://localhost:8000")
+
 })
